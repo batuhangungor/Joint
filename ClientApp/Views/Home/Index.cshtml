@@ -1,16 +1,5 @@
-@using Microsoft.Extensions.Configuration
-@inject IConfiguration Configuration
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
-<app asp-prerender-module="ClientApp/dist/main-server"
-     asp-prerender-data='new {
-    apiUrl = Configuration["ApiAddress"],
-    identityUrl = Configuration["IdentityServerAddress"]
-}'>Loading...</app>
-
-<script src="~/dist/vendor.js" asp-append-version="true"></script>
-@section scripts {
-    <script src="~/dist/main-client.js" asp-append-version="true"></script>
-}
+<h2>OpenID Connect MVC Client</h2>
